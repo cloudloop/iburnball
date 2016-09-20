@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="Emingo" content="iBurnball">
+
+
+        <title>iBurnball</title>
+
+        <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="css/burnball.css" rel="stylesheet">
+        
+        <!-- Custom JS -->
+        <script src="js/burnball.js"></script>
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body onload="playTime();">
+        <div class="container-fluid">
+            <div class="frontpage">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <h1>iBurnall</h1>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <div class="frontpageleft">
+                            Please input name of Team 1: <input type="text" id="TeamName1" autofocus required>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <div class="frontpageright">
+                            Please input name of Team 2: <input type="text" id="TeamName2" required>
+                        </div>
+                        
+                        
+                    </div>
+
+                </div>
+
+                <div class="row timeselect">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        Please input your playing time per side: <br>
+                        <input type="range" value="10" min="3" max="20" step="0.1667" id="timeslider" oninput="playTime();" /> <br>
+                        
+                        <div class="playtimecontain">You have set the playtime to <strong><span id=gametime></span></strong> minutes.</div>
+                        
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <button class="btn btn-success btn-xxl" onclick="getValues();">START GAME</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </body>
+</html>

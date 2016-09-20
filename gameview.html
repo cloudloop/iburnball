@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="Emingo" content="iBurnball">
+
+
+        <title>iBurnball</title>
+
+        <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="css/burnball.css" rel="stylesheet">
+        
+        <!-- Custom JS -->
+        <script src="js/burnball.js"></script>
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body onload="InitiateGame();">
+        <div class="container-fluid">
+            <div class="content">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" id="Team11">
+                        <h2>
+                            <div id="nameT1"></div>
+                        </h2>
+                        <h3> 
+                            <div id="scoreT1"></div> 
+                        </h3>
+                    </div>
+
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" id="Team21">
+                        <h2>
+                            <div id="nameT2"></div>
+                        </h2>
+                        <h3>
+                            <div id="scoreT2"></div>
+                        </h3>
+                    </div>
+                </div>
+                
+                <div class="row buttons">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" id="Team12">
+                        <div id="buttonT1"> 
+                            <button type="button" class="btn btn-success btn-xl" id="homerun" onclick="Homerun();">Homerun</button>
+                            <button type="button" class="btn btn-success btn-xl" id="onelap" onclick="Lap();">One Lap</button>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" id="Team22">
+                        <div id="buttonT2"> 
+                            <button type="button" class="btn btn-danger btn-xl" id="Burn" onclick="Burn();">Burn</button>
+                            <button type="button" class="btn btn-danger btn-xl" id="1Hcatch" onclick="lyra(2);">One handed<br>catch</button>
+                            <button type="button" class="btn btn-danger btn-xl" id="2Hcatch" onclick="lyra(1);">Two handed<br>catch</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <h1>
+                            <div id="gametimer">5:36 </div>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
