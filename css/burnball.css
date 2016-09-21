@@ -7,6 +7,7 @@ body {
 img {
     height: auto;
     max-width: 100%;
+    transition: all .15s ease-in-out; 
 }
 
 .logohead {
@@ -36,3 +37,14 @@ img {
     position: relative;
     left: 40%;
 }
+
+img:hover {
+    -moz-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+
+
