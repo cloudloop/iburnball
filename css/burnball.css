@@ -13,7 +13,7 @@ img {
 .logohead {
     width: 100%;
     max-width: 1000px;
-    padding-bottom: 15%;
+    padding-bottom: 8%;
     padding-top: 10%;
 }
 
@@ -22,7 +22,7 @@ img {
     position: relative;
     left: 50%;
     bottom: 50%;
-    padding-bottom: 2%;
+    padding-bottom: 5%;
     
 }
 .rulesbtn {
@@ -30,12 +30,12 @@ img {
     position: relative;
     left: 2%;
     padding-bottom: -5%;
-    
 }
 .setbtn {
     width: 50%;
     position: relative;
-    left: 40%;
+    left: 45%;
+    bottom: 10%;
 }
 
 img:hover {
@@ -46,5 +46,23 @@ img:hover {
     transform: scale(1.05);
 }
 
+.col-centered {
+    display: inline-block;
+    float: none;
+    text-align: center;
+}
 
+.pagetitle {
+    font-size: 6em;
+}
 
+.rulesbox {
+    width: 80%;
+    margin-left: 10%;
+    background-color: white;
+    opacity: 0.5;
+    text-align: left;
+    padding: 10px;
+    min-height: 40vh;;
+    
+}
