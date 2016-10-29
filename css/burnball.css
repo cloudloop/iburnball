@@ -66,3 +66,14 @@ img:hover {
     min-height: 40vh;;
     
 }
+
+.scorebutton {
+    margin: 10%;
+    width: 80%;
+    height: 10%;
+}
+
+.points {
+    font-size: 6em;
+    margin-left: -10%;
+}
