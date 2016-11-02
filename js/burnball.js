@@ -3,10 +3,11 @@ var history = [];
 var P1 = 0;
 var P2 = 0; 
 var pointbatterin = 1;
-var pointhomerun = 5;
-var point1hcatch = 5;
-var point2hcatch = 5;
-var pointburn = 5;
+var pointhomerun = 6;
+var point1hcatch = 3;
+var point2hcatch = 1;
+var pointburn = 1;
+var totGameTime = 10*60;
 
 
 function updateScore(P1,P2) {
@@ -42,5 +43,24 @@ function scoreadd(id){
     history[i] = sparvec;
     history[i+1] = [];
     i++;
-    console.log(history);
+}
+
+function timeUpdate(gameTimeRemaining){
+    gameTimeMin = Math.floor(gameTimeRemaining/60);
+    gameTimeSec = gameTimeRemaining%60;
+    if (gameTimeMin < 10 ){
+        gameTimeMin = "0" + gameTimeMin;
+    }
+    if (gameTimeSec < 10 ) {
+        gameTimeSec = "0" + gameTimeSec;
+    }
+    document.getElementById("time").innerHTML = gameTimeMin + ":" + gameTimeSec;
+}
+
+function timecals(time){
+    gameTime = time - 1;
+    setTimeout(function(){
+        timeUpdate(gameTime);
+        timecals(gameTime);
+    },1000)
 }

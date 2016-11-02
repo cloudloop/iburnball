@@ -77,3 +77,8 @@ img:hover {
     font-size: 6em;
     margin-left: -10%;
 }
+
+.time {
+    font-size: 8em;
+    margin-left: auto;
+}
