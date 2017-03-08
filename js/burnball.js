@@ -8,6 +8,7 @@ var point1hcatch = 3;
 var point2hcatch = 1;
 var pointburn = 1;
 var totGameTime = 10*60;
+var pause = 0;
 
 
 function updateScore(P1,P2) {
@@ -38,7 +39,7 @@ function scoreadd(id){
         P2 = P2 + pointburn;
     }
     updateScore(P1,P2);
-    var sparvec  = [idd,P1,P2];
+    var sparvec  = [idd,P1,P2,gameTimeMin,gameTimeSec,pause];
     console.log(sparvec);
     history[i] = sparvec;
     history[i+1] = [];
