@@ -18,7 +18,7 @@
         <link href="../css/burnball.css" rel="stylesheet">
         
         <!-- Custom JS -->
-        <script src="../js/burnball.js"></script>
+       
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,22 +28,102 @@
         <![endif]-->
     </head>
 
-    <body>
+    <body onload="loadCookieRyan();">
         <div class="container-fluid">
             <div class="frontpage">
                 <div class="row">
                     <div class="logohead">
-                        <a href="../index.html">
+                        <a href="../index.html" >
                             <img src="../pics/iburnball.png"/>
                         </a>
                     </div>
                 </div>
+                
+                <div class="row">
+                    <div class="col-xs-6 settings">
+                    Time per half (min):</div>
+                    <div class="col-xs-2 minus-button" onclick="minus('settingGameTime');">-
+                    </div>
+                    <div class="col-xs-2 setting-value">
+                        <div id="settingGameTime"></div>
+                    </div>
+                    <div class="col-xs-2 plus-button"   onclick="plus('settingGameTime');">+
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-xs-6 settings">
+                    Points for batters in</div>
+                    <div class="col-xs-2 minus-button" onclick="minus('pointsBatterIn');">-
+                    </div>
+                    <div class="col-xs-2 setting-value">
+                        <div id="pointsBatterIn"></div>
+                    </div>
+                    <div class="col-xs-2 plus-button"   onclick="plus('pointsBatterIn');">+
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-xs-6 settings">
+                    Points for Homeruns</div>
+                    <div class="col-xs-2 minus-button" onclick="minus('pointsHomeRun');">-
+                    </div>
+                    <div class="col-xs-2 setting-value">
+                        <div id="pointsHomeRun"></div>
+                    </div>
+                    <div class="col-xs-2 plus-button"   onclick="plus('pointsHomeRun');">+
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-xs-6 settings">
+                    Points for 1 handed catches</div>
+                    <div class="col-xs-2 minus-button" onclick="minus('points1hCatch');">-
+                    </div>
+                    <div class="col-xs-2 setting-value">
+                        <div id="points1hCatch"></div>
+                    </div>
+                    <div class="col-xs-2 plus-button"   onclick="plus('points1hCatch');">+
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-xs-6 settings">
+                    Points for 2 handed catches</div>
+                    <div class="col-xs-2 minus-button"  onclick="minus('points2hCatch');">-
+                    </div>
+                    <div class="col-xs-2 setting-value">
+                        <div id="points2hCatch"></div>
+                    </div>
+                    <div class="col-xs-2 plus-button"   onclick="plus('points2hCatch');">+
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-xs-6 settings">
+                    Points for burns</div>
+                    <div class="col-xs-2 minus-button"  onclick="minus('pointsBurn');">-
+                    </div>
+                    <div class="col-xs-2 setting-value">
+                        <div id="pointsBurn"></div>
+                    </div>
+                    <div class="col-xs-2 plus-button"   onclick="plus('pointsBurn');">+
+                    </div>
+                </div>
 
 
-                   
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <button class="btn btn-danger btn-lg btn-block btn-center save-btn" onclick="saveSettings();">SAVE</button>
+                    </div>
+                </div>
                 
             </div>
                 
         </div>
+        
+        
+         <script src="../js/burnball.js" type="text/javascript"></script>
+        
     </body>
 </html>

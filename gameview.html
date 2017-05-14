@@ -28,7 +28,7 @@
         <![endif]-->
     </head>
 
-    <body onload="InitiateGame();">
+    <body onload="loadSettings();">
         <div class="container-fluid">
             <div class="content">
                 <div class="row">
@@ -54,26 +54,24 @@
                 <div class="row buttons">
                     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" id="Team12">
                         <div id="buttonT1"> 
-                            <button type="button" class="btn btn-success btn-xl" id="homerun" onclick="Homerun();">Homerun</button>
-                            <button type="button" class="btn btn-success btn-xl" id="onelap" onclick="Lap();">One Lap</button>
+                            <button type="button" class="btn btn-success btn-xl" id="homerun" onclick="scoreadd('homerun');">Homerun</button>
+                            <button type="button" class="btn btn-success btn-xl" id="onelap" onclick="scoreadd('batterin');">One Lap</button>
                         </div>
                     </div>
                     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" id="Team22">
                         <div id="buttonT2"> 
-                            <button type="button" class="btn btn-danger btn-xl" id="Burn" onclick="Burn();">Burn</button>
-                            <button type="button" class="btn btn-danger btn-xl" id="1Hcatch" onclick="lyra(2);">One handed<br>catch</button>
-                            <button type="button" class="btn btn-danger btn-xl" id="2Hcatch" onclick="lyra(1);">Two handed<br>catch</button>
+                            <button type="button" class="btn btn-danger btn-xl" id="Burn" onclick="scoreadd('burn');">Burn</button>
+                            <button type="button" class="btn btn-danger btn-xl" id="1Hcatch" onclick="scoreadd('1hcatch');">One handed<br>catch</button>
+                            <button type="button" class="btn btn-danger btn-xl" id="2Hcatch" onclick="scoreadd('1hcatch');">Two handed<br>catch</button>
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <h1>
-                            <div id="gametimer">5:36 </div>
-                        </h1>
+                    <div id="time" class="coll-xs-12 timer" onclick="startTimer();">
                     </div>
                 </div>
+                
             </div>
         </div>
     </body>
